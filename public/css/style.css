@@ -1,0 +1,60 @@
+:root {
+  --color1: pink;
+  --color2: grey;
+  --background-color: brown;
+}
+/*main style*/
+#main-header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    margin: 0;
+    font-size: xx-large;
+}
+#nav>* {
+    margin: 1% 1% 0 1%;
+    text-decoration: none;
+    color: var(--color2);
+}
+
+#jumbotron {
+    margin: .5% 0 0 1%;
+    font-size: 55px;
+}
+/*Post style*/
+.post-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% 10px 5%;
+  border: 3px solid var(--background-color);
+}
+
+.post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  align-items: flex-end;
+}
+
+.title {
+  color: var(--color1);
+  margin: 1% 0 0.2% 3%;
+  font-size: 300%;
+}
+
+.posted-by {
+  font-size: 150%;
+  color: var(--color2);
+  margin: 1% 3% 0.2% 0;
+}
+
+.post-body {
+  margin: 0 3%;
+}
