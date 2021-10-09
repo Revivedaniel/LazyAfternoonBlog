@@ -28,6 +28,10 @@
     font-size: 55px;
 }
 
+#logout {
+  cursor: pointer;
+}
+
 /*Login page style*/
 .signup-form {
   display: none;
