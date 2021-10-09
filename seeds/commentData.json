@@ -1,0 +1,47 @@
+[
+    {
+        "post_id": 1,
+        "user_id": 1,
+        "comment": "Post 1 comment 1"
+    },
+    {
+        "post_id": 1,
+        "user_id": 1,
+        "comment": "Post 1 comment 2"
+    },
+    {
+        "post_id": 1,
+        "user_id": 1,
+        "comment": "Post 1 comment 3"
+    },
+    {
+        "post_id": 2,
+        "user_id": 1,
+        "comment": "Post 2 comment 1"
+    },
+    {
+        "post_id": 2,
+        "user_id": 1,
+        "comment": "Post 2 comment 2"
+    },
+    {
+        "post_id": 2,
+        "user_id": 1,
+        "comment": "Post 2 comment 3"
+    },
+    {
+        "post_id": 3,
+        "user_id": 1,
+        "comment": "Post 3 comment 1"
+    },
+    {
+        "post_id": 3,
+        "user_id": 1,
+        "comment": "Post 3 comment 2"
+    },
+    {
+        "post_id": 3,
+        "user_id": 1,
+        "comment": "Post 3 comment 3"
+    }
+]
