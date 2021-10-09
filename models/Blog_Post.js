@@ -30,6 +30,8 @@ Blog_Post.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: "blog_post",
   }
 );
+
+module.exports = Blog_Post;
