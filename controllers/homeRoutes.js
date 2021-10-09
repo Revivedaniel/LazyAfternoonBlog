@@ -1,4 +1,4 @@
-const Blog_Post = require('../models/Blog_Post');
+const {User, Comment, Blog_Post} = require('../models')
 
 const router = require('express').Router();
 require('dotenv').config();
@@ -6,10 +6,16 @@ require('dotenv').config();
 router.get('/', async (req, res) => {
   try {
     const postData = await Blog_Post.findAll({
-      limit: 50,
-      order: [
-        ['id', 'DESC']
-      ]
+      include: [
+        {
+            model: User,
+            attributes: ['name']
+        }
+    ],
+    limit: 50,
+    order: [
+      ['id', 'DESC']
+    ]
     })
     const posts = postData.map((p) => p.get({plain: true}));
     for (let i = 0; i < posts.length; i++) {
