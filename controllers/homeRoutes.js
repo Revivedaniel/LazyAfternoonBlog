@@ -12,6 +12,13 @@ router.get('/', async (req, res) => {
       ]
     })
     const posts = postData.map((p) => p.get({plain: true}));
+    for (let i = 0; i < posts.length; i++) {
+      const element = posts[i];
+      const date = new Date(element.time_created)
+      element.time_created = date.toLocaleDateString("en-US", {hour: 'numeric', minute: 'numeric'});
+      
+    }
+
     res.render('homepage', {
       posts,
       logged_in: req.session.logged_in,
