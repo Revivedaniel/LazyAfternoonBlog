@@ -1,13 +1,16 @@
 [
     {
+        "title": "Post 1 Title",
         "user_id": "1",
         "post": "Test Post 1"
     },
     {
+        "title": "Post 2 Title",
         "user_id": "1",
         "post": "Test Post 2"
     },
     {
+        "title": "Post 3 Title",
         "user_id": "1",
         "post": "Test Post 3"
     }
