@@ -13,7 +13,11 @@ Comment.init(
     },
     post_id: {
         type: DataTypes.INTEGER,
-        allowNull: false
+        allowNull: false,
+        references: {
+          model: 'blog_post',
+          key: 'id'
+        }
     },
     user_id: {
       type: DataTypes.INTEGER,
