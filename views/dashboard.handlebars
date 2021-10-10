@@ -1,0 +1,12 @@
+<section id="dashboard">
+  <article id="dashboard-posts">
+    <article id="newPost">
+      <h5>New Post</h5>
+      <input type="text" name="review" id="newPostBody">
+      <button type="submit" id="post_submit" data-userId={{id}}>Submit</button>
+    </article>
+    {{#each posts as |post|}}
+    {{> blog-post}}
+    {{/each}}
+  </article>
+</section>
