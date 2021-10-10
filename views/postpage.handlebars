@@ -7,6 +7,13 @@
     <article class="post-body">
       <p>{{post}}</p>
     </article>
+    {{#if owner}}
+    <article id="userButtons">
+      <button id="updateButton">Update</button>
+      <button id="deleteButton">Delete</button>
+      <button id="saveButton">Save</button>
+    </article>
+    {{/if}}
     <article id="newComment">
       <h5>New Comment</h5>
       <input type="text" name="review" id="comment">
