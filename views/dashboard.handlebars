@@ -1,12 +1,16 @@
 <section id="dashboard">
   <article id="dashboard-posts">
     <article id="newPost">
-      <h5>New Post</h5>
-      <input type="text" name="review" id="newPostBody">
-      <button type="submit" id="post_submit" data-userId={{id}}>Submit</button>
+      <button type="button" name="newPost" id="newPostButton">New Post</button>
+      <button type="button" name="newPostClose" id="newPostCloseButton" class="hidden">Hide</button>
+      <h5 class="hidden">New Post</h5>
+      <input type="text" name="title" id="newPostTitle" class="hidden" placeholder="Title">
+      <input type="text" name="post" id="newPostBody" class="hidden" placeholder="Post Body">
+      <button type="submit" id="post_submit" data-userId={{id}} class="hidden">Submit</button>
     </article>
     {{#each posts as |post|}}
     {{> blog-post}}
     {{/each}}
   </article>
 </section>
+<script src="/js/dashboard.js"></script>
