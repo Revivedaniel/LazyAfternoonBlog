@@ -33,4 +33,23 @@ router.put("/:id", withAuth, async (req, res) => {
   }
 });
 
+router.delete("/:id", withAuth, async (req, res) => {
+  try {
+    const postData = await Blog_Post.findByPk(req.params.id);
+    const post = postData.get({ plain: true });
+    //Verifying that the user created this post
+    if (req.session.user_id == post.user_id) {
+      console.log("Success");
+      try {
+        const post = await Blog_Post.destroy({ where: { id: req.params.id } });
+        res.status(200).json(post);
+      } catch (err) {
+        res.status(404).json(err);
+      }
+    }
+  } catch (err) {
+    console.log(err);
+  }
+});
+
 module.exports = router;
