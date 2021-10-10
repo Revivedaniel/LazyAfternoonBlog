@@ -9,7 +9,11 @@ router.get("/", async (req, res) => {
             }
         })
         const posts = postData.map((p) => p.get({ plain: true }))
-        res.json(posts)
+        res.render('dashboard', {
+            posts,
+            id: req.session.user_id,
+            logged_in: req.session.logged_in,
+        })
     } catch (err) {
         if (!req.session.user_id) {
             console.log(req.session.user_id)
