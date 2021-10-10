@@ -72,8 +72,9 @@ deleteButtonEl.addEventListener("click", (event) => {
 //if confirm button clicked then send delete
 confirmButtonEl.addEventListener("click", async (event) => {
   event.preventDefault();
-  const response = await fetch(`/api/posts/${event.target.dataset.postid}`, {
+  const response = await fetch(`/api/posts/${confirmButtonEl.dataset.postid}`, {
     method: "DELETE",
+    body: "",
     headers: { "Content-Type": "application/json" },
   });
   if (response.ok) {
