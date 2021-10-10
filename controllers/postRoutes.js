@@ -53,6 +53,9 @@ router.get("/:id", async (req, res) => {
         hour: "numeric",
         minute: "numeric",
       });
+      if (element.user_id == req.session.user_id) {
+        element.owner = true;
+      }
     }
     //adding comments to post
     post.comments = comments;
