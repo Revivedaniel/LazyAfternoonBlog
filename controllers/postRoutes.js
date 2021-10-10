@@ -26,6 +26,7 @@ router.get("/:id", async (req, res) => {
           attributes: ["name"],
         },
       ],
+      order: [["id", "DESC"]],
     });
     const date = new Date(post.time_created);
     post.time_created = date.toLocaleDateString("en-US", {
