@@ -11,8 +11,10 @@
     <article id="userButtons">
       <button id="updateButton">Update</button>
       <button id="deleteButton">Delete</button>
-      <button id="saveButton">Save</button>
+      <button id="saveButton" class="hidden" data-postId={{id}}>Save</button>
+      <button id="cancelButton" class="hidden">Cancel</button>
     </article>
+    <script src="/js/editPost.js"></script>
     {{/if}}
     <article id="newComment">
       <h5>New Comment</h5>
