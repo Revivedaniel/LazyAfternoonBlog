@@ -44,7 +44,10 @@ router.get("/:id", async (req, res) => {
       });
     }
     post.comments = comments;
-    res.render("postpage", post);
+    res.render("postpage", {
+      ...post,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {}
 });
 
