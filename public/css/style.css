@@ -59,6 +59,9 @@
   margin: 0 5% 10px 5%;
   border: 3px solid var(--background-color);
 }
+.post-container:hover {
+  cursor: pointer;
+}
 
 .post-header {
   display: flex;
