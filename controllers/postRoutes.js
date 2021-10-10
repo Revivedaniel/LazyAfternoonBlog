@@ -56,7 +56,9 @@ router.get("/:id", async (req, res) => {
       ...post,
       logged_in: req.session.logged_in,
     });
-  } catch (err) {}
+  } catch (err) {
+    res.json(err)
+  }
 });
 
 module.exports = router;
