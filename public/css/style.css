@@ -3,6 +3,10 @@
   --color2: grey;
   --background-color: brown;
 }
+
+.hidden {
+  display: none;
+}
 /*main style*/
 #main-header {
   display: flex;
@@ -78,4 +82,15 @@
 
 .post-body {
   margin: 0 3%;
+}
+
+/*Dashboard style*/
+#newPostButton,
+#newPostCloseButton {
+  width: 100%;
+  height: 26px;
+}
+
+#newPost {
+  margin: 0 5% 10px 5%;
 }
