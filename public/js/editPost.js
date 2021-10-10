@@ -3,6 +3,8 @@ const updateButtonEl = document.querySelector("#updateButton");
 const deleteButtonEl = document.querySelector("#deleteButton");
 const saveButtonEl = document.querySelector("#saveButton");
 const cancelButtonEl = document.querySelector("#cancelButton");
+const confirmButtonEl = document.querySelector("#confirmButton");
+const deleteConfirmationEl = document.querySelector("#deleteConfirmation");
 const titleValue = document.querySelector(".title").innerText;
 const postValue = document.querySelector(".post-body").children[0].innerText;
 const postHeader = document.querySelector(".post-header");
@@ -54,9 +56,29 @@ saveButtonEl.addEventListener("click", async (event) => {
   }
 });
 //if the cancel button is clicked reload the page
-
+cancelButtonEl.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.location.reload();
+});
 //if the delete button is clicked ask for confirmation
-
+deleteButtonEl.addEventListener("click", (event) => {
+  event.preventDefault();
+  deleteConfirmationEl.classList.remove("hidden");
+  confirmButtonEl.classList.remove("hidden");
+  cancelButtonEl.classList.remove("hidden");
+  updateButtonEl.classList.add("hidden");
+  deleteButtonEl.classList.add("hidden");
+});
 //if confirm button clicked then send delete
-
-//if cancel button clicked reload page
+confirmButtonEl.addEventListener("click", async (event) => {
+  event.preventDefault();
+  const response = await fetch(`/api/posts/${event.target.dataset.postid}`, {
+    method: "DELETE",
+    headers: { "Content-Type": "application/json" },
+  });
+  if (response.ok) {
+    window.location.reload();
+  } else {
+    alert(response.statusText);
+  }
+});
