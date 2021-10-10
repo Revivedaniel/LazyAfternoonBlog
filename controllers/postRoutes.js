@@ -28,6 +28,9 @@ router.get('/:id', async (req, res) => {
                 }
             ]
         });
+            const date = new Date(post.time_created)
+            post.time_created = date.toLocaleDateString("en-US", {hour: 'numeric', minute: 'numeric'});
+            
         const comments = commentData.map((c) => c.get({plain: true}));
         for (let i = 0; i < comments.length; i++) {
             const element = comments[i];
