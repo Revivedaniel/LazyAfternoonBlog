@@ -1,0 +1,16 @@
+<section id="postpage">
+    <article id="post">
+        <article class="post-header">
+    <p class="title">{{title}}</p>
+    <p class="posted-by">posted by {{user.name}} at {{time_created}}</p>
+  </article>
+  <article class="post-body">
+    <p>{{post}}</p>
+  </article>
+    </article>
+    <article id="comments">
+        {{#each comments as |comment|}}
+            {{> comment-card}}
+        {{/each}}
+    </article>
+</section>
