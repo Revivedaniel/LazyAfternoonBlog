@@ -30,11 +30,7 @@ router.get("/", async (req, res) => {
             logged_in: req.session.logged_in,
         })
     } catch (err) {
-        if (!req.session.user_id) {
-            console.log(req.session.user_id)
-        } else (
-            res.json(err)
-        )
+        res.redirect("/login")
     }
     
     
