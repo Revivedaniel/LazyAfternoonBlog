@@ -19,6 +19,10 @@ router.get("/:id", async (req, res) => {
     //cleaning postData
     const post = postData.get({ plain: true });
 
+    if (req.session.logged_in && post.user_id == req.session.user_id) {
+      post.owner = true;
+    }
+
     //finding comments for blog post
     const commentData = await Comment.findAll({
       where: {
@@ -57,7 +61,7 @@ router.get("/:id", async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    res.json(err)
+    res.json(err);
   }
 });
 
