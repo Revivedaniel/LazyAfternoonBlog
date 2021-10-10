@@ -44,17 +44,16 @@ const signupFormHandler = async (event) => {
   }
 };
 
+document
+  .querySelector(".login-form")
+  .addEventListener("submit", loginFormHandler);
 
-document.querySelector(".login-form").addEventListener("submit", loginFormHandler);
-
-document.querySelector(".signup-form").addEventListener("submit", signupFormHandler);
+document
+  .querySelector(".signup-form")
+  .addEventListener("submit", signupFormHandler);
 
 //Hiding login when signup is clicked
-document.querySelector('#signUp').addEventListener('click', (event) => {
-  document.querySelector('.signup-form').style.display = 'block';
-  document.querySelectorAll('.login-card')[0].style.display = 'none';
+document.querySelector("#signUp").addEventListener("click", (event) => {
+  document.querySelector(".signup-form").style.display = "block";
+  document.querySelectorAll(".login-card")[0].style.display = "none";
 });
-
-
-
-

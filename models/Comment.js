@@ -12,20 +12,20 @@ Comment.init(
       autoIncrement: true,
     },
     post_id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        references: {
-          model: 'blog_post',
-          key: 'id'
-        }
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "blog_post",
+        key: "id",
+      },
     },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'user',
-        key: 'id'
-      }
+        model: "user",
+        key: "id",
+      },
     },
     time_created: {
       type: DataTypes.DATE,

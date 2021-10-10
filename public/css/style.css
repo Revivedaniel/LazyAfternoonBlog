@@ -5,27 +5,27 @@
 }
 /*main style*/
 #main-header {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-color);
 }
 
 #nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    margin: 0;
-    font-size: xx-large;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin: 0;
+  font-size: xx-large;
 }
-#nav>* {
-    margin: 1% 1% 0 1%;
-    text-decoration: none;
-    color: var(--color2);
+#nav > * {
+  margin: 1% 1% 0 1%;
+  text-decoration: none;
+  color: var(--color2);
 }
 
 #jumbotron {
-    margin: .5% 0 0.2% 1%;
-    font-size: 55px;
+  margin: 0.5% 0 0.2% 1%;
+  font-size: 55px;
 }
 
 #logout {
@@ -37,12 +37,13 @@
   display: none;
 }
 
-#logIn>* {
+#logIn > * {
   text-decoration: none;
   color: black;
 }
 
-#signUp:hover, #logIn a:hover {
+#signUp:hover,
+#logIn a:hover {
   color: blue;
   cursor: pointer;
 }
