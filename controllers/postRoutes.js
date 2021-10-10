@@ -28,9 +28,15 @@ router.get('/:id', async (req, res) => {
                 }
             ]
         });
-        const comments = commentData.map((c) => c.get({plain: true}))
+        const comments = commentData.map((c) => c.get({plain: true}));
+        for (let i = 0; i < comments.length; i++) {
+            const element = comments[i];
+            const date = new Date(element.time_created)
+            element.time_created = date.toLocaleDateString("en-US", {hour: 'numeric', minute: 'numeric'});
+            
+          }
         post.comments = comments
-        res.json(post)
+        res.render('postpage', post)
     } catch (err) {
         
     }
