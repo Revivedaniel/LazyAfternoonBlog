@@ -91,6 +91,12 @@
   font-size: large;
 }
 
+#comments > * {
+  background-color: var(--background-color);
+  width: fit-content;
+  color: var(--color1);
+}
+
 /*Dashboard style*/
 #newPostButton,
 #newPostCloseButton {
@@ -100,6 +106,16 @@
 
 #newPost {
   margin: 0 5% 10px 5%;
+  display: flex;
+  flex-direction: column;
+}
+
+#newPostTitle {
+  height: 30px;
+}
+
+#newPostBody {
+  height: 50px;
 }
 
 /*login style*/
@@ -109,6 +125,7 @@
   flex-direction: column;
   align-items: flex-start;
 }
-#login-form > *, #signup-form > * {
+#login-form > *,
+#signup-form > * {
   margin: 5px 0 0;
 }
