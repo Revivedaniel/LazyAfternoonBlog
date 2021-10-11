@@ -22,7 +22,9 @@ post_submit.addEventListener("click", async (event) => {
       headers: { "Content-Type": "application/json" },
     });
 
-    if (response.ok) {
+    if (response.redirected) {
+      window.location = "/login"
+    } else if (response.ok) {
       window.location.reload();
     } else {
       alert(response.statusText);
