@@ -25,5 +25,7 @@ If you would like to contribute to the development of the website, Contact Reviv
 * <a href="mailto:webdevstark@gmail.com<">webdevstark@gmail.com</a>
 
 ## Demo
+![DemoVideo](./images/lazyAfternoonBlogDemo.gif)
 
 ## Live Site
+https://lazy-afternoon-blog.herokuapp.com/
