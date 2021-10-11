@@ -87,6 +87,10 @@
   margin: 0 3%;
 }
 
+.post-body > * {
+  font-size: large;
+}
+
 /*Dashboard style*/
 #newPostButton,
 #newPostCloseButton {
