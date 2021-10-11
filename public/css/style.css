@@ -101,3 +101,14 @@
 #newPost {
   margin: 0 5% 10px 5%;
 }
+
+/*login style*/
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#login-form > *, #signup-form > * {
+  margin: 5px 0 0;
+}
