@@ -15,10 +15,12 @@ comment_submit.addEventListener("click", async (event) => {
       headers: {"Content-Type": "application/json"}
     });
 
-    if (response.ok) {
-      window.location.reload();
-    } else {
-      alert(response.statusText);
-    }
+    if (response.redirected) {
+        window.location = "/login"
+      } else if (response.ok) {
+        window.location.reload();
+      } else {
+        alert(response.statusText);
+      }
   }
 });
