@@ -78,7 +78,7 @@ confirmButtonEl.addEventListener("click", async (event) => {
     headers: { "Content-Type": "application/json" },
   });
   if (response.ok) {
-    window.location.reload();
+    window.location.replace("/");
   } else {
     alert(response.statusText);
   }
