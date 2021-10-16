@@ -18,7 +18,6 @@
 - MySQL
 - NodeJS
 - Heroku
-- IGDB API
 
 ## Packages
 - bcrypt
