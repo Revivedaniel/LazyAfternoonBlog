@@ -104,8 +104,10 @@
 /*Dashboard style*/
 #newPostButton,
 #newPostCloseButton {
-  width: 100%;
+  width: 60%;
   height: 26px;
+  margin: .8% auto;
+  font-size: large;
 }
 
 #newPost {
