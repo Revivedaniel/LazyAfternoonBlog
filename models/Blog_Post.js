@@ -29,8 +29,11 @@ Blog_Post.init(
       defaultValue: DataTypes.NOW,
     },
     post: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(5000),
       allowNull: false,
+      validate: {
+        len: [50,5000]
+      }
     },
   },
   {
