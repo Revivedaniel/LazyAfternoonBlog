@@ -5,7 +5,7 @@
       <p class="posted-by">posted by {{user.name}} at {{time_created}}</p>
     </article>
     <article class="post-body">
-      <p>{{post}}</p>
+      <p style="max-height: fit-content;">{{post}}</p>
     </article>
     {{#if owner}}
     <article id="userButtons">
@@ -18,12 +18,13 @@
     </article>
     <script src="/js/editPost.js"></script>
     {{/if}}
+  </article>
+
     <article id="newComment">
       <h5>New Comment</h5>
       <input type="text" name="review" id="comment">
       <button type="submit" id="comment_submit" data-postId={{id}}>Submit</button>
     </article>
-  </article>
 
   <article id="comments">
     {{#each comments as |comment|}}
@@ -34,3 +35,4 @@
 
 <script src="/js/editComment.js"></script>
 <script src="/js/newComment.js"></script>
+
