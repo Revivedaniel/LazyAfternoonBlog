@@ -5,7 +5,7 @@
       <p class="posted-by">posted by {{user.name}} at {{time_created}}</p>
     </article>
     <article class="post-body">
-      <p style="max-height: fit-content;">{{post}}</p>
+      <pre style="max-height: fit-content; white-space: pre-wrap;">{{post}}</pre>
     </article>
     {{#if owner}}
     <article id="userButtons">
