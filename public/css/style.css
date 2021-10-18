@@ -122,7 +122,16 @@
 }
 
 #newPostBody {
-  height: 50px;
+  height: 150px;
+  width: 60%;
+  margin: auto;
+  resize: vertical;
+}
+#post_submit {
+  width: 60%;
+  height: 26px;
+  margin: 0.8% auto;
+  font-size: large;
 }
 
 /*login style*/
