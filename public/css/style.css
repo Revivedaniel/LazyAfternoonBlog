@@ -106,7 +106,7 @@
 #newPostCloseButton {
   width: 60%;
   height: 26px;
-  margin: .8% auto;
+  margin: 0.8% auto;
   font-size: large;
 }
 
@@ -117,6 +117,8 @@
 
 #newPostTitle {
   height: 30px;
+  width: 60%;
+  margin: auto;
 }
 
 #newPostBody {
