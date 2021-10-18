@@ -9,7 +9,7 @@ router.post("/", withAuth, async (req, res) => {
       user_id: req.session.user_id,
       post: req.body.post,
     };
-    const postData = Blog_Post.create(newPost);
+    const postData = await Blog_Post.create(newPost);
     res.status(200).json(postData);
   } catch (err) {}
 });
