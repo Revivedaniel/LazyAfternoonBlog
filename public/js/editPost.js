@@ -17,12 +17,15 @@ updateButtonEl.addEventListener("click", (event) => {
   saveButtonEl.classList.remove("hidden");
   cancelButtonEl.classList.remove("hidden");
   const titleInput = document.createElement("input");
-  const postInput = document.createElement("input");
+  const postTextArea = document.createElement("textarea");
 
   titleInput.setAttribute("id", "newTitle");
-  postInput.setAttribute("id", "newPost");
+  postTextArea.setAttribute("id", "newPost");
   titleInput.value = titleValue;
-  postInput.value = postValue;
+  postTextArea.value = postValue;
+  postTextArea.setAttribute("maxLength", "5000");
+  postTextArea.setAttribute("onfocus", 'this.style.height = "";this.style.height = this.scrollHeight + "px"');
+  postTextArea.style.maxHeight = "100%"
 
   titleInput.classList.add("title");
 
@@ -31,7 +34,7 @@ updateButtonEl.addEventListener("click", (event) => {
   postBody.children[0].classList.add("hidden");
 
   postHeader.appendChild(titleInput);
-  postBody.appendChild(postInput);
+  postBody.appendChild(postTextArea);
 });
 
 //if the save button is clicked send put

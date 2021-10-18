@@ -5,7 +5,7 @@
       <p class="posted-by">posted by {{user.name}} at {{time_created}}</p>
     </article>
     <article class="post-body">
-      <p style="max-height: fit-content;">{{post}}</p>
+      <pre style="max-height: fit-content; white-space: pre-wrap;">{{post}}</pre>
     </article>
     {{#if owner}}
     <article id="userButtons">
@@ -22,7 +22,7 @@
 
     <article id="newComment">
       <h5>New Comment</h5>
-      <input type="text" name="review" id="comment">
+      <textarea name="comment" id="comment" cols="30" rows="5" maxlength="255"></textarea>
       <button type="submit" id="comment_submit" data-postId={{id}}>Submit</button>
     </article>
 

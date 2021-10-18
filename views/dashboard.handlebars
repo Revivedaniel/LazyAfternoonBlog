@@ -5,7 +5,7 @@
       <button type="button" name="newPostClose" id="newPostCloseButton" class="hidden">Hide</button>
       <h5 class="hidden">New Post</h5>
       <input type="text" name="title" id="newPostTitle" class="hidden" placeholder="Title">
-      <input type="text" name="post" id="newPostBody" class="hidden" placeholder="Post Body">
+      <textarea name="post" id="newPostBody" class="hidden" cols="30" rows="10" placeholder="Post Body" maxlength="5000"></textarea>
       <button type="submit" id="post_submit" data-userId={{id}} class="hidden">Submit</button>
     </article>
     {{#each posts as |post|}}
