@@ -97,8 +97,33 @@
 
 #comments > * {
   background-color: var(--background-color);
-  width: fit-content;
+  width: 100%;
   color: var(--color1);
+  margin-top: 1%;
+}
+
+#newComment {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+  align-items: center;
+}
+#newComment > * {
+  width: 100%;
+  text-align: center;
+}
+
+#comments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  margin: auto;
+}
+
+.comment-container article {
+  margin-left: 3%;
 }
 
 /*Dashboard style*/
