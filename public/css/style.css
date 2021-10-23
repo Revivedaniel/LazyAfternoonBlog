@@ -4,11 +4,11 @@
   --lightColor3: #dae0e6;
   --lightColor4: #cccccc;
   --lightColor5: #0079d3;
-  /* --color1: #938cd2;
+  --color1: #938cd2;
   --color2: #a08da8;
   --color3: #ddccdf;
   --color4: #fff2ce;
-  --color5: #f0b28d; */
+  --color5: #f0b28d;
   --background-color: #f0b28d;
 }
 
@@ -120,12 +120,10 @@
   margin: auto;
 }
 
-#userButtons {
-}
-
 .comment-container article {
   margin-left: 3%;
 }
+
 #postpage {
   background-color: var(--lightColor3);
 }
