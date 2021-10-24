@@ -48,6 +48,7 @@ body {
   font-size: 32px;
   font-family: var(--globalFont);
   color: var(--lightColor5);
+  text-decoration: none;
 }
 
 #logout {
