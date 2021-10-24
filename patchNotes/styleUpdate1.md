@@ -8,3 +8,5 @@
 \+ Lazy Afternoon Blog jubmbotron takes you to the homepage when clicked
 \+ Updated new post UI to be clean and easy to look at and added background color for possible theme
 \+ Updated new comment UI to match new post UI
+\+ Updated Comments design and made it easier to read the text
+\+ Post design is more sleek and easily readable
