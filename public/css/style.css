@@ -18,7 +18,7 @@
   /*Bordering*/
   --uiBorderRadius: 4px;
   /*Fonts*/
-  --globalFont: font-family: 'DM Sans', sans-serif;
+  --globalFont: "DM Sans", sans-serif;
 }
 
 .hidden {
@@ -57,6 +57,7 @@ body {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  font-family: var(--globalFont);
 }
 
 /*Post style*/
@@ -67,6 +68,7 @@ body {
   margin: 0.3% 20% 10px 20%;
   border: 1px solid var(--lightColor4);
   border-radius: var(--uiBorderRadius);
+  font-family: var(--globalFont);
 }
 .post-container:hover {
   cursor: pointer;
@@ -125,6 +127,7 @@ body {
 #newComment > * {
   width: 100%;
   text-align: center;
+  font-family: var(--globalFont);
 }
 #comment {
   resize: none;
@@ -138,6 +141,7 @@ body {
   align-items: center;
   width: 60%;
   margin: auto;
+  font-family: var(--globalFont);
 }
 
 .comment-container article {
@@ -160,6 +164,9 @@ body {
 #newPost {
   display: flex;
   flex-direction: column;
+}
+#newPost > * {
+  font-family: var(--globalFont);
 }
 
 #newPostTitle {
