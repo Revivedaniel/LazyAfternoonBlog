@@ -17,6 +17,7 @@
   --background-color: #f0b28d;
   /*Bordering*/
   --uiBorderRadius: 4px;
+  --uiBorder: 1px solid var(--lightColor4);
   /*Fonts*/
   --globalFont: "DM Sans", sans-serif;
 }
@@ -167,17 +168,29 @@ body {
 }
 
 /*Dashboard style*/
-#newPostButton,
-#newPostCloseButton {
-  width: 60%;
+#newPostButton {
+  width: 100%;
   height: 26px;
   margin: 0.8% auto;
   font-size: large;
 }
 
+#newPostCloseButton {
+  height: 26px;
+  font-size: large;
+  margin: 0 3px 7px 0;
+  border-radius: var(--uiBorderRadius);
+  border: var(--uiBorder);
+}
+
 #newPost {
   display: flex;
   flex-direction: column;
+  margin: 0 auto 16px;
+  align-items: center;
+  width: 60%;
+  background-color: var(--background-color);
+  border: var(--uiBorder);
 }
 #newPost > * {
   font-family: var(--globalFont);
@@ -186,27 +199,31 @@ body {
 
 #newPostTitle {
   height: 30px;
-  width: 60%;
-  margin: auto;
+  width: 97%;
   border: 1px solid var(--lightColor4);
 }
 
 #newPostBody {
   height: 150px;
-  width: 60%;
-  margin: auto;
+  width: 97%;
+  margin: .5% 0 1%;
   resize: vertical;
   border: 1px solid var(--lightColor4);
 }
+
 #post_submit {
-  width: 60%;
   height: 26px;
-  margin: 0.8% auto;
   font-size: large;
+  border: var(--uiBorder);
+  border-radius: var(--uiBorderRadius);
+  background-color: var(--color4);
 }
 
 #dashboard-posts {
   background-color: var(--lightColor3);
+}
+#dashboard {
+  padding: 16px 0 0 0;
 }
 
 #updatedComment {
@@ -216,6 +233,26 @@ body {
   resize: vertical;
   border: 1px solid var(--lightColor4);
 }
+#newPostHeading {
+  font-size: 30px;
+  padding: 5px 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--lightColor4);
+  margin: 0 0 1.2% 0;
+}
+
+#newPostButtons {
+  display: flex;
+  flex-direction: row;
+  width: 97%;
+  justify-content: flex-end;
+}
+
+#newPostButtons > * {
+  font-family: inherit;
+}
+
 
 /*login style*/
 
