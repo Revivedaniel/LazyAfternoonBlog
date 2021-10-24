@@ -5,21 +5,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lazy Afternoon Blog</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 
 <body>
   <header id="main-header">
     <span id="nav">
-      <a href="/">Home</a>
-      <a href="/dashboard">Dashboard</a>
-      {{#if logged_in}}
-      <a id="logout">logout</a>
-      {{else}}
-      <a href="/login">login</a>
-      {{/if}}
+      <a id="jumbotron">Lazy Afternoon Blog</a>
+      <span id="navOptions">
+        <a href="/">Home</a>
+        <a href="/dashboard">Dashboard</a>
+        {{#if logged_in}}
+        <a id="logout">logout</a>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </span>
     </span>
-    <h1 id="jumbotron">Lazy Afternoon Blog</h1>
   </header>
   {{{body}}}
   {{#if logged_in}}
