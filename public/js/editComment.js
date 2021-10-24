@@ -19,11 +19,11 @@ for (let i = 0; i < updateCommentButtonEl.length; i++) {
     const commentTextArea = document.createElement("textarea");
     commentTextArea.setAttribute("id", "updatedComment");
     console.log(event.target.parentElement.querySelector(".comment-text"))
-    commentTextArea.value = event.target.parentElement.querySelector(".comment-text").innerText;
+    commentTextArea.value = event.target.parentElement.parentElement.querySelector(".comment-text").innerText;
     commentTextArea.setAttribute("maxLength", "255");
     commentTextArea.setAttribute("onfocus", 'this.style.height = "";this.style.height = this.scrollHeight + "px"');
     commentTextArea.style.maxHeight = "100%";
-    event.target.parentElement.querySelector(".comment-body").appendChild(commentTextArea);
+    event.target.parentElement.parentElement.querySelector(".comment-body").appendChild(commentTextArea);
   });
 }
 

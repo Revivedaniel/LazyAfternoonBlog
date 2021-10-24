@@ -6,10 +6,12 @@
     <p class="comment-text">{{comment}}</p>
   </article>
   {{#if owner}}
-  <button class="commentUpdateButton">Update</button>
-  <button class="saveCommentButton hidden" data-comment_id={{id}}>Save</button>
-  <button class="commentDeleteButton">Delete</button>
-  <button class="confirmCommentButton hidden" data-comment_id={{id}}>Confirm</button>
-  <button class="cancelUpdateButton hidden">Cancel</button>
+  <span id="commentUserButtons">
+    <button class="commentUpdateButton">Update</button>
+    <button class="commentDeleteButton">Delete</button>
+    <button class="confirmCommentButton hidden" data-comment_id={{id}}>Confirm</button>
+    <button class="cancelUpdateButton hidden">Cancel</button>
+    <button class="saveCommentButton hidden" data-comment_id={{id}}>Save</button>
+  </span>
   {{/if}}
 </section>

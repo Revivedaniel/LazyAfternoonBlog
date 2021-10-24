@@ -7,7 +7,7 @@
   --color1: #938cd2;
   --color2: #a08da8;
   --color3: #ddccdf;
-  --color4: #fff2ce;
+  --color4: #ffe6ce;
   --color5: #f0b28d;
   --summer1: #ffb37b;
   --summer2: #fff7aa;
@@ -70,11 +70,10 @@ body {
 }
 
 /*Post style*/
-.post-container,
-#post {
+.post-container, #post {
   display: flex;
   flex-direction: column;
-  margin: 0.3% 20% 10px 20%;
+  margin: 0.3% 20% 1.4% 20%;
   border: 1px solid var(--lightColor4);
   border-radius: var(--uiBorderRadius);
   font-family: var(--globalFont);
@@ -123,7 +122,6 @@ body {
 }
 
 #comments > * {
-  background-color: var(--background-color);
   width: 100%;
   margin-top: 1%;
 }
@@ -133,7 +131,7 @@ body {
   display: flex;
   flex-direction: column;
   width: 60%;
-  margin: auto;
+  margin: 0 auto 1.4%;
   align-items: center;
   background-color: var(--background-color);
   border-radius: var(--uiBorderRadius);
@@ -161,6 +159,8 @@ body {
   margin: auto;
   font-family: var(--globalFont);
   color: var(--lightColor5);
+  background-color: var(--background-color);
+  border-radius: var(--uiBorderRadius);
 }
 
 #comment_submit {
@@ -179,8 +179,11 @@ body {
   width: 97%;
 }
 
-.comment-container article {
-  margin-left: 3%;
+.comment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--lightColor4);
 }
 
 #postpage {
@@ -193,6 +196,56 @@ body {
   text-align: center;
   border-bottom: 1px solid var(--lightColor4);
   margin: 0 0 1.2% 0;
+}
+
+.commented-by {
+  padding: 5px 0;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 1.2% 0;
+  font-family: var(--globalFont);
+  font-style: italic;
+}
+.comment-text {
+  padding: 5px 0;
+  width: 97%;
+  text-align: start;
+  margin: 0 auto 1.2%;
+  background-color: var(--color4);
+}
+
+#commentUserButtons {
+  display: flex;
+  justify-content: flex-end;
+  width: 97%;
+}
+
+.comment-body {
+  width: 100%;
+  display: flex;
+}
+
+.comment-header {
+  width: 100%;
+}
+
+.commentUpdateButton, .commentDeleteButton, .cancelUpdateButton, .confirmCommentButton, #updateButton, #deleteButton {
+  height: 26px;
+  font-size: large;
+  border: var(--uiBorder);
+  border-radius: var(--uiBorderRadius);
+  width: auto;
+  margin: 0 0 7px 0;
+}
+
+.saveCommentButton {
+  height: 26px;
+    font-size: large;
+    border: var(--uiBorder);
+    border-radius: var(--uiBorderRadius);
+    background-color: var(--color4);
+    width: auto;
+    margin: 0 0 7px 0;
 }
 
 /*Dashboard style*/
@@ -257,7 +310,7 @@ body {
 
 #updatedComment {
   height: 150px;
-  width: 60%;
+  width: 97%;
   margin: auto;
   resize: vertical;
   border: 1px solid var(--lightColor4);
