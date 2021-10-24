@@ -98,16 +98,15 @@ body {
 .title {
   font-size: 30px;
   width: 100%;
-  margin: .5% 0 0.5% 3%;
+  margin: 0.5% 0 0.5% 3%;
 }
 
 .posted-by {
   font-size: 100%;
-  margin: .5% 3% 0.5% 0;
+  margin: 0.5% 3% 0.5% 0;
   font-style: italic;
   text-align: end;
 }
-
 
 .post-body {
   padding: 1% 3%;
@@ -136,6 +135,8 @@ body {
   width: 60%;
   margin: auto;
   align-items: center;
+  background-color: var(--background-color);
+  border-radius: var(--uiBorderRadius);
 }
 #newComment > * {
   width: 100%;
@@ -147,6 +148,9 @@ body {
   resize: none;
   border: 1px solid var(--lightColor4);
   border-radius: var(--uiBorderRadius);
+  width: 97%;
+  margin: 0 0 1%;
+  text-align: start;
 }
 
 #comments {
@@ -159,12 +163,36 @@ body {
   color: var(--lightColor5);
 }
 
+#comment_submit {
+  height: 26px;
+  font-size: large;
+  border: var(--uiBorder);
+  border-radius: var(--uiBorderRadius);
+  background-color: var(--color4);
+  width: auto;
+  margin: 0 0 7px 0;
+}
+
+#newCommentUserButtons {
+  display: flex;
+  justify-content: flex-end;
+  width: 97%;
+}
+
 .comment-container article {
   margin-left: 3%;
 }
 
 #postpage {
   background-color: var(--lightColor3);
+}
+
+#newCommentHeader {
+  padding: 5px 0;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid var(--lightColor4);
+  margin: 0 0 1.2% 0;
 }
 
 /*Dashboard style*/
@@ -191,6 +219,7 @@ body {
   width: 60%;
   background-color: var(--background-color);
   border: var(--uiBorder);
+  border-radius: var(--uiBorderRadius);
 }
 #newPost > * {
   font-family: var(--globalFont);
@@ -206,7 +235,7 @@ body {
 #newPostBody {
   height: 150px;
   width: 97%;
-  margin: .5% 0 1%;
+  margin: 0.5% 0 1%;
   resize: vertical;
   border: 1px solid var(--lightColor4);
 }
@@ -252,7 +281,6 @@ body {
 #newPostButtons > * {
   font-family: inherit;
 }
-
 
 /*login style*/
 
