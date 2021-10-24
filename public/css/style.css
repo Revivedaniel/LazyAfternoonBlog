@@ -3,7 +3,7 @@
   --lightColor2: #f8f9fa;
   --lightColor3: #dae0e6;
   --lightColor4: #cccccc;
-  --lightColor5: #0079d3;
+  --lightColor5: #435787;
   --color1: #938cd2;
   --color2: #a08da8;
   --color3: #ddccdf;
@@ -44,9 +44,10 @@ body {
 }
 
 #jumbotron {
-  margin: 0.5% 0 0.2% 1%;
+  margin: 0.5% 0 0.5% 1%;
   font-size: 32px;
   font-family: var(--globalFont);
+  color: var(--lightColor5);
 }
 
 #logout {
@@ -58,6 +59,12 @@ body {
   justify-content: space-evenly;
   flex-direction: row;
   font-family: var(--globalFont);
+  align-items: center;
+}
+#navOptions > * {
+  padding: 0 5px;
+  text-decoration: none;
+  color: var(--lightColor5);
 }
 
 /*Post style*/
@@ -69,6 +76,8 @@ body {
   border: 1px solid var(--lightColor4);
   border-radius: var(--uiBorderRadius);
   font-family: var(--globalFont);
+  color: var(--lightColor5);
+  background-color: var(--lightColor2);
 }
 .post-container:hover {
   cursor: pointer;
@@ -92,7 +101,6 @@ body {
 
 .posted-by {
   font-size: 150%;
-  color: var(--color2);
   margin: 1% 3% 0.2% 0;
 }
 
@@ -113,11 +121,11 @@ body {
 #comments > * {
   background-color: var(--background-color);
   width: 100%;
-  color: var(--color1);
   margin-top: 1%;
 }
 
 #newComment {
+  color: var(--lightColor5);
   display: flex;
   flex-direction: column;
   width: 60%;
@@ -128,6 +136,7 @@ body {
   width: 100%;
   text-align: center;
   font-family: var(--globalFont);
+  color: var(--lightColor5);
 }
 #comment {
   resize: none;
@@ -142,6 +151,7 @@ body {
   width: 60%;
   margin: auto;
   font-family: var(--globalFont);
+  color: var(--lightColor5);
 }
 
 .comment-container article {
@@ -167,6 +177,7 @@ body {
 }
 #newPost > * {
   font-family: var(--globalFont);
+  color: var(--lightColor5);
 }
 
 #newPostTitle {
@@ -226,6 +237,11 @@ body {
 #logIn a:hover {
   color: blue;
   cursor: pointer;
+}
+
+#loginPage {
+  color: var(--lightColor5);
+  font-family: var(--globalFont);
 }
 
 /*Homepage style*/
