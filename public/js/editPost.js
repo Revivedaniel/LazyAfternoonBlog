@@ -20,7 +20,7 @@ updateButtonEl.addEventListener("click", (event) => {
   const postTextArea = document.createElement("textarea");
 
   titleInput.setAttribute("id", "newTitle");
-  postTextArea.setAttribute("id", "newPost");
+  postTextArea.setAttribute("id", "updatePostText");
   titleInput.value = titleValue;
   postTextArea.value = postValue;
   postTextArea.setAttribute("maxLength", "5000");
@@ -41,7 +41,7 @@ updateButtonEl.addEventListener("click", (event) => {
 saveButtonEl.addEventListener("click", async (event) => {
   event.preventDefault();
   const title = document.querySelector("#newTitle").value;
-  const post = document.querySelector("#newPost").value;
+  const post = document.querySelector("#updatePostText").value;
   if (title && post) {
     const response = await fetch(`/api/posts/${event.target.dataset.postid}`, {
       method: "PUT",

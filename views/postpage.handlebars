@@ -20,11 +20,13 @@
     {{/if}}
   </article>
 
-    <article id="newComment">
-      <h5>New Comment</h5>
-      <textarea name="comment" id="comment" cols="30" rows="5" maxlength="255"></textarea>
+  <article id="newComment">
+    <h5 id="newCommentHeader">New Comment</h5>
+    <textarea name="comment" id="comment" cols="30" rows="3" maxlength="255" placeholder="New Comment"></textarea>
+    <span id="newCommentUserButtons">
       <button type="submit" id="comment_submit" data-postId={{id}}>Submit</button>
-    </article>
+    </span>
+  </article>
 
   <article id="comments">
     {{#each comments as |comment|}}
@@ -35,4 +37,3 @@
 
 <script src="/js/editComment.js"></script>
 <script src="/js/newComment.js"></script>
-

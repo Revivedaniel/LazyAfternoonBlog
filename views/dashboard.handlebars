@@ -1,12 +1,15 @@
 <section id="dashboard">
   <article id="dashboard-posts">
     <article id="newPost">
+      <h5 class="hidden" id="newPostHeading">New Post</h5>
+        <input type="text" name="title" id="newPostTitle" class="hidden" placeholder="Title">
+        <textarea name="post" id="newPostBody" class="hidden" cols="30" rows="10" placeholder="Post Body"
+          maxlength="5000"></textarea>
+      <span id="newPostButtons">
+        <button type="button" name="newPostClose" id="newPostCloseButton" class="hidden">Hide</button>
+        <button type="submit" id="post_submit" data-userId={{id}} class="hidden">Submit</button>
       <button type="button" name="newPost" id="newPostButton">New Post</button>
-      <button type="button" name="newPostClose" id="newPostCloseButton" class="hidden">Hide</button>
-      <h5 class="hidden">New Post</h5>
-      <input type="text" name="title" id="newPostTitle" class="hidden" placeholder="Title">
-      <textarea name="post" id="newPostBody" class="hidden" cols="30" rows="10" placeholder="Post Body" maxlength="5000"></textarea>
-      <button type="submit" id="post_submit" data-userId={{id}} class="hidden">Submit</button>
+      </span>
     </article>
     {{#each posts as |post|}}
     {{> blog-post}}
