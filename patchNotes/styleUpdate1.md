@@ -5,8 +5,8 @@
 \+ Set light mode font color to #435787.<br>
 \+ Fixed post title position issues and gave them the global font and color.<br>
 \+ fixed posted by info position issues and gave them the global font italicized and global color.<br>
-\+ Lazy Afternoon Blog jubmbotron takes you to the homepage when clicked
-\+ Updated new post UI to be clean and easy to look at and added background color for possible theme
-\+ Updated new comment UI to match new post UI
-\+ Updated Comments design and made it easier to read the text
-\+ Post design is more sleek and easily readable
+\+ Lazy Afternoon Blog jubmbotron takes you to the homepage when clicked.<br>
+\+ Updated new post UI to be clean and easy to look at and added background color for possible theme.<br>
+\+ Updated new comment UI to match new post UI.<br>
+\+ Updated Comments design and made it easier to read the text.<br>
+\+ Post design is more sleek and easily readable.<br>
