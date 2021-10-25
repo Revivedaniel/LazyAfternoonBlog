@@ -7,6 +7,19 @@
     <article class="post-body">
       <pre style="max-height: fit-content; white-space: pre-wrap;">{{post}}</pre>
     </article>
+    {{#if admin}}
+    {{#if owner}}
+    {{else}}
+    <article id="adminButtons">
+      <button id="adminDeleteButton">Delete</button>
+      <p class="hidden" id="adminDeleteConfirmation">Delete Post?</p>
+      <button id="adminConfirmButton" class="hidden" data-postId={{id}}>Confirm</button>
+      <button id="adminCancelButton" class="hidden">Cancel</button>
+    </article>
+    <script src="/js/admin.js"></script>
+    {{/if}}
+    {{/if}}
+
     {{#if owner}}
     <article id="userButtons">
       <button id="updateButton">Update</button>
