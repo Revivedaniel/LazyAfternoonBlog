@@ -5,13 +5,33 @@
   <article class="comment-body">
     <p class="comment-text">{{comment}}</p>
   </article>
+  {{#if admin}}
+    {{#if owner}}{{else}}
+      <span id="adminCommentUserButtons">
+        <button class="adminCommentDeleteButton">Delete</button>
+        <p class="hidden adminDeleteCommentConfirmation">Delete Comment?</p>
+        <button
+          class="adminConfirmCommentDeleteButton hidden"
+          data-comment_id={{id}}
+        >Confirm</button>
+        <button class="adminCancelUpdateButton hidden">Cancel</button>
+      </span>
+    {{/if}}
+  {{/if}}
+
   {{#if owner}}
-  <span id="commentUserButtons">
-    <button class="commentUpdateButton">Update</button>
-    <button class="commentDeleteButton">Delete</button>
-    <button class="confirmCommentButton hidden" data-comment_id={{id}}>Confirm</button>
-    <button class="cancelUpdateButton hidden">Cancel</button>
-    <button class="saveCommentButton hidden" data-comment_id={{id}}>Save</button>
-  </span>
+    <span id="commentUserButtons">
+      <button class="commentUpdateButton">Update</button>
+      <button class="commentDeleteButton">Delete</button>
+      <button
+        class="confirmCommentButton hidden"
+        data-comment_id={{id}}
+      >Confirm</button>
+      <button class="cancelUpdateButton hidden">Cancel</button>
+      <button
+        class="saveCommentButton hidden"
+        data-comment_id={{id}}
+      >Save</button>
+    </span>
   {{/if}}
 </section>
