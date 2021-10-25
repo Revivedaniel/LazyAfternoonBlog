@@ -28,7 +28,7 @@ router.get("/users", adminTask, async (req, res) => {
   }
 });
 
-router.post("/seedall", async (req, res) => {
+router.post("/seedall", adminTask, async (req, res) => {
   const sequelize = require("../../config/connection");
 
   const postData = require("../../seeds/postData.json");
