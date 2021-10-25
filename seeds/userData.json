@@ -1,0 +1,9 @@
+[
+    {
+      "id": 1,
+      "name": "Daniel",
+      "email": "webdevstark@gmail.com",
+      "password": "$2b$10$sZZR0svKhLl4Hxw.Ng6Y8.Y84ap6iP0d4tBwlm2.l8N4P4MYfcAVi",
+      "role_id": 1
+    }
+  ]

@@ -3,7 +3,7 @@ const { User, Comment, Blog_Post, Role } = require("../../models");
 const withAuth = require("../../utils/auth");
 const adminTask = require("../../utils/adminTask");
 
-router.get("/posts", async (req, res) => {
+router.get("/posts", adminTask, async (req, res) => {
   try {
     const postData = await Blog_Post.findAll({});
     res.json(postData);
@@ -11,7 +11,7 @@ router.get("/posts", async (req, res) => {
     res.redirect("/login");
   }
 });
-router.get("/comments", async (req, res) => {
+router.get("/comments", adminTask, async (req, res) => {
   try {
     const postData = await Comment.findAll({});
     res.json(postData);
@@ -19,7 +19,7 @@ router.get("/comments", async (req, res) => {
     res.redirect("/login");
   }
 });
-router.get("/users", async (req, res) => {
+router.get("/users", adminTask, async (req, res) => {
   try {
     const postData = await User.findAll({});
     res.json(postData);
@@ -28,7 +28,7 @@ router.get("/users", async (req, res) => {
   }
 });
 
-router.post("/seedall", adminTask, async (req, res) => {
+router.post("/seedall", async (req, res) => {
   const sequelize = require("../../config/connection");
 
   const postData = require("../../seeds/postData.json");

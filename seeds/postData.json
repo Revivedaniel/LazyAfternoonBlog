@@ -1,30 +1,16 @@
 [
     {
-      "id": 1,
-      "title": "Post 1 Title",
-      "user_id": 1,
-      "time_created": "2021-10-17T23:12:13.000Z",
-      "post": "Test Post 1"
-    },
-    {
       "id": 2,
-      "title": "Post 2 Title",
+      "title": "Version 1.0",
       "user_id": 1,
-      "time_created": "2021-10-17T23:12:13.000Z",
-      "post": "Test Post 2"
+      "time_created": "2021-10-18T01:59:40.000Z",
+      "post": "This is officialy v1.0\n\nWhenever the site is updated. A patch notes-style post will be made. \n\nPlanned future updates:\n1. More appealing color scheme\n2. New post UI style update\n3. New comment UI style update\n4. Comment style update\n5. Post style update"
     },
     {
-      "id": 3,
-      "title": "Post 3 Title",
+      "id": 4,
+      "title": "Style Update 1",
       "user_id": 1,
-      "time_created": "2021-10-17T23:12:13.000Z",
-      "post": "10. GoNintendo (www.gonintendo.com)\nBy sheer weight of posts alone, this is a required RSS feed or bookmark for anyone interested in Nintendo gaming, whether Wii or DS. It sucks up stories from around the Internet and aggregates them quickly, offering a central point for the Nintendo news of the day.\n\n9. Shacknews (www.shacknews.com)\nIn truth, Shacknews is one of those sites that blurs the line between a blog and a news site, so comprehensive is its mixture of news and features. With so many blogs chasing the same news, it's a worthy read because it still manages to pick up exclusives and new angles.\n\n8. That VideoGame Blog (www.thatvideogameblog.com)\nAnother multi-format blog that digs behind the headlines, often offering posts that are as interesting to people in the games industry as to gamers. A difficult line to walk, but it manages it with aplomb. A clean design and clear writing makes it a refreshing read.\n\n7. UK Resistance (www.ukresistance.co.uk)\nDon't come here looking for 20 news posts a day, but do come if your interests encompass Sega, Suzanne Shaw and Sony-slating at every opportunity. Not that UKR is a po-faced fanboy blog: it's so consistently funny you'll never dare drink tea in front of your monitor again.\n\n6. Touch Arcade (www.toucharcade.com)\niPhone gaming, as you'll know if you've seen Apple's recent jabs at Nintento and Sony, is huge. Touch Arcade is one of the blogs that have sprung up to cover this burgeoning market, offering news, hands-on previews and a bustling forum full of developers talking about their latest games."
-    },
-    {
-      "id": 12,
-      "title": "A real title",
-      "user_id": 1,
-      "time_created": "2021-10-18T00:08:56.000Z",
-      "post": "Some parts of the print media have suffered more than others from the advent of the Web, but games magazines would come near the top of any death list. Monthly titles have seen their news coverage poleaxed by hundreds of blogs and sites that are able to run with the tiniest scraps of news and screenshots as soon as they emerge.\n\nBut the best gaming blogs also offer sparky analysis and pointed reviews, while some simply serve up epic belly laughs. Our sister site GameSpot UK has all of those and more on its blog London Calling, but we couldn't really include them, could we? Here are the ten best we've found (that don't sit right next to us).\n\n10. GoNintendo (www.gonintendo.com)\nBy sheer weight of posts alone, this is a required RSS feed or bookmark for anyone interested in Nintendo gaming, whether Wii or DS. It sucks up stories from around the Internet and aggregates them quickly, offering a central point for the Nintendo news of the day.\n\n9. Shacknews (www.shacknews.com)\nIn truth, Shacknews is one of those sites that blur the line between a blog and a news site, so comprehensive is its mixture of news and features. With so many blogs chasing the same news, it's a worthy read because it still manages to pick up exclusives and new angles.\n\n8. That VideoGame Blog (www.thatvideogameblog.com)\nAnother multi-format blog that digs behind the headlines, often offering posts that are as interesting to people in the games industry as to gamers. A difficult line to walk, but it manages it with aplomb. A clean design and clear writing make it a refreshing read.\n\n7. UK Resistance (www.ukresistance.co.uk)\nDon't come here looking for 20 news posts a day, but do come if your interests encompass Sega, Suzanne Shaw, and Sony-slating at every opportunity. Not that UKR is a po-faced fanboy blog: it's so consistently funny you'll never dare drink tea in front of your monitor again.\n\n6. Touch Arcade (www.toucharcade.com)\niPhone gaming, as you'll know if you've seen Apple's recent jabs at Nintendo and Sony, is huge. Touch Arcade is one of the blogs that have sprung up to cover this burgeoning market, offering news, hands-on previews, and a bustling forum full of developers talking about their latest games.\n\n5. Guardian Games Blog (www.guardian.co.uk/technology/gamesblog)\nAs befitting the blog of a broadsheet newspaper, the Guardian's Games Blog eschews the scramble for press releases and screenshots in favor of a more measured approach, offering analysis, interviews, and opinion. Always readable, and often thought-provoking.\n\n4. Destructoid (www.destructoid.com)\nThere are hundreds of blogs that simply rehash games news -- none of which feature on this list. Destructoid stands out as one of the games blogs with a definable character of its own: sharp, sparky, and never knowingly dull.\n\n3. VG247 (www.vg247.com)\nThis certainly has the most momentum of all the UK blogs on this list, having recently scooped three gongs at the Games Media Awards. They were well-deserved too: the writing is excellent, and it covers all the important news with a twist of humor.\n\n2. Joystiq (www.joystiq.com)\nOne of the two heavyweights of the games blogging world (the other is below), Joystiq offers dozens of posts a day, getting news stories up at the drop of a hat, and chasing down exclusive info whenever possible. An essential source for anyone interested in gaming.\n\n1. Kotaku (www.kotaku.com)\nIn truth, it's hard to choose between Kotaku and Joystiq -- a good deal of the stories they post are on the same subjects, such as the fierce competition between the two. Kotaku edges it for its humor, however, with its writers expressing their characters without becoming self-indulgent."
+      "time_created": "2021-10-24T23:01:15.000Z",
+      "post": "I've just pushed style update 1 live. Here are the updates:\n\n+ Update comment button works now.\n+ Added compression to all files sent.\n+ Rearranged the nav to be more visually appealing.\n+ Set a global font variable that is generally easy to read.\n+ Set light mode font color to #435787.\n+ Fixed post title position issues and gave them the global font and color.\n+ fixed posted by info position issues and gave them the global font italicized and global color.\n+ Lazy Afternoon Blog jumbotron takes you to the homepage when clicked.\n+ Updated new post UI to be clean and easy to look at and added background color for possible theme.\n+ Updated new comment UI to match new post UI.\n+ Updated Comments design and made it easier to read the text.\n+ Post design is sleeker and easily readable.\n\nI'm very proud of this update. Mostly because I have not been doing so well with my styling lately. I am progressing for sure but style is still my most tedious work. The next updates will mostly be administrative tools. But, I will be adding at least 1 general user feature per feature update. Along with many bug fixes and whatnot.\n"
     }
   ]
