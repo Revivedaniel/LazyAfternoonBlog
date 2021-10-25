@@ -11,7 +11,9 @@ router.post("/", withAuth, async (req, res) => {
     };
     const postData = await Blog_Post.create(newPost);
     res.status(200).json(postData);
-  } catch (err) {}
+  } catch (err) {
+    res.status(500).json(err)
+  }
 });
 
 router.put("/:id", withAuth, async (req, res) => {
@@ -51,7 +53,7 @@ router.delete("/:id", withAuth, async (req, res) => {
       }
     }
   } catch (err) {
-    console.log(err);
+    res.json(err)
   }
 });
 
