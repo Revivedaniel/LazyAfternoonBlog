@@ -1,13 +1,1 @@
-let postContainers = document.querySelectorAll(".post-container");
-
-let toPostPage = (event) => {
-  event.preventDefault();
-
-  const postId = event.currentTarget.dataset.postid;
-  document.location.replace(`/posts/${postId}`);
-};
-
-for (let i = 0; i < postContainers.length; i++) {
-  const element = postContainers[i];
-  element.addEventListener("click", toPostPage);
-}
+let postContainers=document.querySelectorAll(".post-container"),toPostPage=a=>{a.preventDefault();const b=a.currentTarget.dataset.postid;document.location.replace(`/posts/${b}`)};for(let a=0;a<postContainers.length;a++){const b=postContainers[a];b.addEventListener("click",toPostPage)}
