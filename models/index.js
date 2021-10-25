@@ -39,4 +39,4 @@ User.belongsTo(Role, {
   foreignKey: "role_id"
 })
 
-module.exports = { User, Comment, Blog_Post };
+module.exports = { User, Comment, Blog_Post, Role };
