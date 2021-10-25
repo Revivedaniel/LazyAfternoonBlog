@@ -22,6 +22,9 @@ router.get("/:id", async (req, res) => {
     if (req.session.logged_in && post.user_id == req.session.user_id) {
       post.owner = true;
     }
+    if (req.session.role_id == 1) {
+      post.admin = true;
+    }
 
     //finding comments for blog post
     const commentData = await Comment.findAll({
@@ -55,6 +58,9 @@ router.get("/:id", async (req, res) => {
       });
       if (element.user_id == req.session.user_id) {
         element.owner = true;
+      }
+      if (req.session.role_id == 1) {
+        element.admin = true;
       }
     }
     //adding comments to post

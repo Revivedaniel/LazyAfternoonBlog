@@ -37,6 +37,14 @@ User.init(
         len: [8],
       },
     },
+    role_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: "role",
+        key: "id",
+      },
+    },
   },
   {
     hooks: {

@@ -1,0 +1,8 @@
+[
+    {
+      "name": "NewUser",
+      "email": "newuserwebsite.com",
+      "password": "Thisisthenewpass2",
+      "role_id": 2
+    }
+  ]
