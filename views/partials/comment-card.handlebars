@@ -9,8 +9,9 @@
     {{#if owner}}{{else}}
       <span id="adminCommentUserButtons">
         <button class="adminCommentDeleteButton">Delete</button>
+        <p class="hidden adminDeleteCommentConfirmation">Delete Comment?</p>
         <button
-          class="adminConfirmCommentButton hidden"
+          class="adminConfirmCommentDeleteButton hidden"
           data-comment_id={{id}}
         >Confirm</button>
         <button class="adminCancelUpdateButton hidden">Cancel</button>

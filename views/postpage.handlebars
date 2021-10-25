@@ -16,7 +16,6 @@
       <button id="adminConfirmButton" class="hidden" data-postId={{id}}>Confirm</button>
       <button id="adminCancelButton" class="hidden">Cancel</button>
     </article>
-    <script src="/js/admin.js"></script>
     {{/if}}
     {{/if}}
 
@@ -47,6 +46,8 @@
     {{/each}}
   </article>
 </section>
-
+{{#if admin}}
+<script src="/js/admin.js"></script>
+{{/if}}
 <script src="/js/editComment.js"></script>
 <script src="/js/newComment.js"></script>
