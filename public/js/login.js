@@ -52,11 +52,3 @@ const loginFormHandler = async (event) => {
     .querySelector(".signup-form")
     .addEventListener("submit", signupFormHandler);
   
-  //Hiding login when signup is clicked
-  document.querySelector("#signUp").addEventListener("click", (event) => {
-    document.querySelector(".signup-form").style.display = "flex";
-    document.querySelector(".signup-form").style.flexDirection = "column";
-    document.querySelector(".signup-form").style.alignItems = "flex-start";
-    document.querySelectorAll(".login-card")[0].style.display = "none";
-  });
-  
