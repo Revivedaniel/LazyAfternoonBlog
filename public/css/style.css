@@ -71,6 +71,11 @@ body {
 
 #adminTools {
   background-color: var(--summer4);
+  cursor: pointer;
+}
+
+#adminButtons, .adminCommentUserButtons {
+  display: none;
 }
 
 /*Post style*/

@@ -17,6 +17,9 @@
     <span id="nav">
       <a href="/" id="jumbotron">Lazy Afternoon Blog</a>
       <span id="navOptions">
+        {{#if admin}}
+        <a id="adminTools" data-status="off">Admin Tools: Off</a>
+        {{/if}}
         <a href="/">Home</a>
         <a href="/dashboard">Dashboard</a>
         {{#if logged_in}}
