@@ -421,8 +421,17 @@ body {
 }
 
 .form-input {
-  width: 97%;
-  border: 1 px solid var(--lightColor4);
+  appearance: none;
+  font-size: .9rem;
+  line-height: 1.8em;
+  width: 100%;
+  outline: none;
+  border: var(--uiBorder);
+  border-radius: var(--uiBorderRadius);
+  background-color: #fff;
+  color: #3e4354;
+  box-shadow: 0 1px 2px 0 rgb(56 56 56 / 10%);
+  padding: 1.8% 3.8%;
 }
 
 /*Homepage style*/
