@@ -4,28 +4,34 @@ const User = require("../../models/User");
 router.post("/", async (req, res) => {
   //check if username has been used
   try {
-    const userData = await User.findOne({where: {name: req.body.name}})
+    const userData = await User.findOne({ where: { name: req.body.name } });
     if (userData) {
-      res.status(409).send("Username must be unique")
+      res.statusMessage = "Username must be unique";
+      res.status(409).end();
     }
   } catch (err) {}
   //check if email has been used
   try {
-    const userData = await User.findOne({where: {email: req.body.email}})
+    const userData = await User.findOne({ where: { email: req.body.email } });
     if (userData) {
-      res.status(409).send("Email must be unique")
+      res.statusMessage = "Email must be unique";
+      res.status(409).end();
     }
   } catch (err) {}
   //use regex to verify email is email format
-  if (!req.body.email.match(/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/)) {
-    res.status(409).send("Email not accepted")
+  if (
+    !req.body.email.match(
+      /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
+    )
+  ) {
+    res.statusMessage = "Email not in correct format";
+    res.status(409).end();
   }
   try {
-    const userData = await User.create(
-      {
-        ...req.body,
-        role_id: 2,
-      })
+    const userData = await User.create({
+      ...req.body,
+      role_id: 2,
+    });
     //creating session for the new user
     req.session.save(() => {
       req.session.user_id = userData.id;
@@ -62,7 +68,7 @@ router.post("/login", async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-      req.session.role_id = userData.role_id
+      req.session.role_id = userData.role_id;
 
       res.json({ user: userData, message: "You are now logged in!" });
     });
