@@ -2,6 +2,21 @@ const router = require("express").Router();
 const User = require("../../models/User");
 //creating a user
 router.post("/", async (req, res) => {
+  //check if username has been used
+  try {
+    const userData = await User.findOne({where: {name: req.body.name}})
+    if (userData) {
+      res.status(409).send("Username must be unique")
+    }
+  } catch (err) {}
+  //check if email has been used
+  try {
+    const userData = await User.findOne({where: {email: req.body.email}})
+    if (userData) {
+      res.status(409).send("Email must be unique")
+    }
+  } catch (err) {}
+  //use regex to verify email is email format
   try {
     const userData = await User.create(
       {
@@ -21,6 +36,7 @@ router.post("/", async (req, res) => {
 });
 //Loging in user
 router.post("/login", async (req, res) => {
+  //use regex to verify email is email format
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
