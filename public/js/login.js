@@ -1,3 +1,11 @@
+//email and password regex
+const emailRegex =
+/(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
+const passRegex =
+/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+const nameRegex = 
+/[\w]{5,}/
+
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -28,14 +36,8 @@ const signupFormHandler = async (event) => {
   const name = document.querySelector("#name-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
-  //email and password regex
-  const emailRegex =
-    /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
-  const passRegex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   const goodEmail = emailRegex.test(email);
   const goodpassword = passRegex.test(password);
-
   const nameHint = document.querySelector("#signupHintName");
   const emailHint = document.querySelector("#signupHintEmail");
   const passwordHint = document.querySelector("#signupHintPassword");
@@ -77,6 +79,48 @@ const signupFormHandler = async (event) => {
     }
   }
 };
+
+const checkValidation = (event) => {
+  event.preventDefault();
+  const targetValue = event.target.value
+  const thisHint = event.target.parentElement.querySelector(".signupHints")
+  switch (event.target.getAttribute("id")) {
+    case "name-signup":
+      if (nameRegex.test(targetValue)) {
+        thisHint.style.backgroundColor = "var(--acceptedColor)"
+      } else {
+        thisHint.style.backgroundColor = "var(--deniedColor)"
+      }
+      break;
+      case "email-signup":
+      if (emailRegex.test(targetValue)) {
+        thisHint.style.backgroundColor = "var(--acceptedColor)"
+      } else {
+        thisHint.style.backgroundColor = "var(--deniedColor)"
+      }
+      break;
+      case "password-signup":
+      if (passRegex.test(targetValue)) {
+        thisHint.style.backgroundColor = "var(--acceptedColor)"
+      } else {
+        thisHint.style.backgroundColor = "var(--deniedColor)"
+      }
+      break;
+
+    default:
+      break;
+  }
+};
+
+document
+  .querySelector("#name-signup")
+  .addEventListener("focusout", checkValidation);
+document
+  .querySelector("#email-signup")
+  .addEventListener("focusout", checkValidation);
+document
+  .querySelector("#password-signup")
+  .addEventListener("focusout", checkValidation);
 
 document
   .querySelector(".login-form")
