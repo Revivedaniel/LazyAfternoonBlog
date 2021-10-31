@@ -74,7 +74,8 @@ body {
   cursor: pointer;
 }
 
-#adminButtons, .adminCommentUserButtons {
+#adminButtons,
+.adminCommentUserButtons {
   display: none;
 }
 
@@ -422,7 +423,7 @@ body {
 
 .form-input {
   appearance: none;
-  font-size: .9rem;
+  font-size: 0.9rem;
   line-height: 1.8em;
   width: 100%;
   outline: none;
@@ -432,6 +433,11 @@ body {
   color: #3e4354;
   box-shadow: 0 1px 2px 0 rgb(56 56 56 / 10%);
   padding: 1.8% 3.8%;
+}
+
+.signupNameCollapse {
+  margin-top: 2%;
+  background-color: var(--color4);
 }
 
 /*Homepage style*/
