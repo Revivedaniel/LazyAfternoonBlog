@@ -1,4 +1,6 @@
 :root {
+  --acceptedColor: #a6f08d;
+  --deniedColor: #e37688;
   --lightColor1: #ffffff;
   --lightColor2: #f8f9fa;
   --lightColor3: #dae0e6;
@@ -435,7 +437,7 @@ body {
   padding: 1.8% 3.8%;
 }
 
-.signupNameCollapse {
+.signupHints {
   margin-top: 2%;
   background-color: var(--color4);
 }

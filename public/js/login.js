@@ -35,6 +35,10 @@ const loginFormHandler = async (event) => {
     const goodEmail = emailRegex.test(email)
     const goodpassword = passRegex.test(password)
 
+    const nameHint = document.querySelector("#signupHintName");
+    const emailHint = document.querySelector("#signupHintEmail");
+    const passwordHint = document.querySelector("#signupHintPassword");
+
     if (name && goodEmail && goodpassword) {
       const response = await fetch("/api/users", {
         method: "POST",
@@ -48,7 +52,30 @@ const loginFormHandler = async (event) => {
         //COME BACK HERE 
         //THIS IS WHERE YOU NEED TO CHANGE THE EMAIL AND PASSWORD CHECKS 
         //TO RED DEPENDING ON THE STATUSTEXT
-        console.log(response)
+        console.log(response.statusText)
+        switch (response.statusText) {
+          case "Username must be unique":
+            nameHint.style.backgroundColor = "var(--deniedColor)";
+            nameHint.innerText = "Username taken"
+            break;
+          case "Email must be unique":
+            emailHint.style.backgroundColor = "var(--deniedColor)";
+            emailHint.innerText = "Email already registered"
+            nameHint.style.backgroundColor = "var(--acceptedColor)";
+            nameHint.innerText = "Name must be Alphanumeric (a-zA-Z0-9)"
+            break;
+          case "Email not in correct format":
+            emailHint.style.backgroundColor = "var(--deniedColor)";
+            emailHint.innerText = response.statusText;
+            break;
+          case "Password not in correct format":
+            passwordHint.style.backgroundColor = "var(--deniedColor)";
+            passwordHint.innerText = response.statusText;
+            break;
+        
+          default:
+            break;
+        }
       }
     }
   };
