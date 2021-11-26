@@ -1,7 +1,7 @@
 
 # Lazy Afternoon Blog
 
-## Summary
+## Description
 This blog was developed to tackle the problem of not having a space to talk about specifically video game related topics. Now users can signup for the blog and make blog posts of their own!
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
