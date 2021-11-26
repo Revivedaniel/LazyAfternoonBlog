@@ -41,7 +41,22 @@ This blog was developed to tackle the problem of not having a space to talk abou
 5. Admins can delete all posts and comments
 
 ## Installation
-To install this project first clone the repository
+
+To install this project, first clone the repository. Once the repo is cloned, navigate to the folder in your terminal and run the following command.
+```md
+npm install
+```
+This will install all the dependencies. Next you'll want to seed the database (Seed date needs to be updated). Run the following command to seed the database.
+```md
+npm run seed
+```
+After the seeds are done you can now start the server with this command.
+```md
+npm start
+```
+
+## Testing
+Currently, there are no tests developed for this project.
 
 ## Credits
 Revivedaniel (Sole developer)
