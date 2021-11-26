@@ -1,6 +1,8 @@
 
 # Lazy Afternoon Blog
-A blog site for Video Games, Anime, Movies, and more.<br>
+
+## Summary
+This blog was developed to tackle the problem of not having a space to talk about specifically video game related topics. Now users can signup for the blog and make blog posts of their own!
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
@@ -36,9 +38,13 @@ A blog site for Video Games, Anime, Movies, and more.<br>
 2. Create, update, and delete blog posts
 3. Create, update, and delete comments
 4. View others posts and comments
+5. Admins can delete all posts and comments
+
+## Installation
+To install this project first clone the repository
 
 ## Credits
-Revivedaniel
+Revivedaniel (Sole developer)
 
 ## License
 GNU GPLv3
