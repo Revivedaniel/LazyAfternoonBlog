@@ -14,7 +14,6 @@ This blog was developed to tackle the problem of not having a space to talk abou
 - [License](#license)
 - [Questions](#questions)
 - [Demo](#demo)
-- [Live Site](#live site)
 
 ## Tech & Language used
 - HTML 5
