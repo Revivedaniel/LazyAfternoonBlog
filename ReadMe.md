@@ -8,11 +8,13 @@ This blog was developed to tackle the problem of not having a space to talk abou
 
 ## Table of Contents
 - [Installation](#installation)
-- [Usage](#usage)
+- [Features](#features)
+- [Testing](#testing)
 - [Credits](#credits)
 - [License](#license)
 - [Questions](#questions)
 - [Demo](#demo)
+- [Live Site](#live site)
 
 ## Tech & Language used
 - HTML 5
