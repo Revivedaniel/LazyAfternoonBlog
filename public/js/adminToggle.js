@@ -7,11 +7,11 @@ adminToggleEl.addEventListener("click", (event) => {
   if (status == "on") {
     if (postAdminTools) {
       postAdminTools.style.display = "none";
-      if (commentAdminTools) {
-        commentAdminTools.map((c) => {
-            c.style.display = "none";
-        })
-      }
+    }
+    if (commentAdminTools) {
+      commentAdminTools.map((c) => {
+          c.style.display = "none";
+      })
     }
     
     adminToggleEl.dataset.status = "off";
@@ -20,13 +20,12 @@ adminToggleEl.addEventListener("click", (event) => {
 if (status == "off") {
     if (postAdminTools) {
         postAdminTools.style.display = "block";
-        if (commentAdminTools) {
-            commentAdminTools.map((c) => {
-                c.style.display = "block";
-            })
-        }
-    }
-    
+      }
+      if (commentAdminTools) {
+          commentAdminTools.map((c) => {
+              c.style.display = "block";
+          })
+      }
     adminToggleEl.dataset.status = "on";
     adminToggleEl.innerText = "Admin Tools: On"
   }
