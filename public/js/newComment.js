@@ -1,1 +1,26 @@
-const comment_submit=document.querySelector("#comment_submit");comment_submit.addEventListener("click",async a=>{a.preventDefault();const b=comment_submit.dataset.postid,c=document.querySelector("#comment").value;if(c){const a=await fetch("/api/comments",{method:"POST",body:JSON.stringify({postId:b,comment:c}),headers:{"Content-Type":"application/json"}});a.redirected?window.location="/login":a.ok?window.location.reload():alert(a.statusText)}});
+const comment_submit = document.querySelector("#comment_submit");
+
+comment_submit.addEventListener("click", async (event) => {
+  event.preventDefault();
+
+  const postId = comment_submit.dataset.postid;
+  const comment = document.querySelector("#comment").value;
+  if (comment) {
+    const response = await fetch("/api/comments", {
+      method: "POST",
+      body: JSON.stringify({
+        postId,
+        comment,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    if (response.redirected) {
+      window.location = "/login";
+    } else if (response.ok) {
+      window.location.reload();
+    } else {
+      alert(response.statusText);
+    }
+  }
+});
