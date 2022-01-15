@@ -13,6 +13,8 @@ const loginFormHandler = async (event) => {
   const password = document.querySelector("#password-login").value.trim();
   const goodEmail = emailRegex.test(email);
   const goodPassword = passRegex.test(password);
+  const emailHint = document.querySelector("#loginHintEmail");
+  const passwordHint = document.querySelector("#loginHintPassword");
 
   if (goodEmail && goodPassword) {
     // Send a POST request to the API endpoint
@@ -21,12 +23,26 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
-
     if (response.ok) {
       // If successful, redirect the browser to the home page
       document.location.replace("/");
     } else {
-      alert(response.statusText);
+      switch (response.statusText) {
+        case "Incorrect email, please try again":
+          console.log("Inside incorrect email");
+          emailHint.style.backgroundColor = "var(--deniedColor)";
+          emailHint.innerText = response.statusText;
+          emailHint.style.display = "block";
+          break;
+        case "Incorrect password, please try again":
+          passwordHint.style.backgroundColor = "var(--deniedColor)";
+          passwordHint.innerText = response.statusText;
+          passwordHint.style.display = "block";
+          break;
+
+        default:
+          break;
+      }
     }
   }
 };
@@ -91,9 +107,9 @@ const checkValidation = (event) => {
         thisHint.style.backgroundColor = "var(--acceptedColor)";
         setTimeout(() => {
           thisHint.style.display = "none";
-        }, 2000)
+        }, 2000);
       } else {
-        thisHint.style.display = "block"
+        thisHint.style.display = "block";
         thisHint.style.backgroundColor = "var(--deniedColor)";
       }
       break;
@@ -102,9 +118,9 @@ const checkValidation = (event) => {
         thisHint.style.backgroundColor = "var(--acceptedColor)";
         setTimeout(() => {
           thisHint.style.display = "none";
-        }, 2000)
+        }, 2000);
       } else {
-        thisHint.style.display = "block"
+        thisHint.style.display = "block";
         thisHint.style.backgroundColor = "var(--deniedColor)";
       }
       break;
@@ -113,9 +129,9 @@ const checkValidation = (event) => {
         thisHint.style.backgroundColor = "var(--acceptedColor)";
         setTimeout(() => {
           thisHint.style.display = "none";
-        }, 2000)
+        }, 2000);
       } else {
-        thisHint.style.display = "block"
+        thisHint.style.display = "block";
         thisHint.style.backgroundColor = "var(--deniedColor)";
       }
       break;
@@ -124,20 +140,25 @@ const checkValidation = (event) => {
         thisHint.style.backgroundColor = "var(--acceptedColor)";
         setTimeout(() => {
           thisHint.style.display = "none";
-        }, 1000)
+        }, 1000);
       } else {
-        thisHint.style.display = "block"
+        thisHint.style.display = "block";
         thisHint.style.backgroundColor = "var(--deniedColor)";
       }
       break;
     case "password-login":
-      if (passRegex.test(targetValue)) {
+      if (thisHint.innerText === "Incorrect password, please try again") {
+        thisHint.style.backgroundColor = "var(--deniedColor)";
+        thisHint.innerText = "Incorrect password, please try again";
+      } else if (passRegex.test(targetValue)) {
         thisHint.style.backgroundColor = "var(--acceptedColor)";
         setTimeout(() => {
-          thisHint.style.display = "none";
-        }, 1000)
+          if (thisHint.innerText !== "Incorrect password, please try again") {
+            thisHint.style.display = "none";
+          }
+        }, 1000);
       } else {
-        thisHint.style.display = "block"
+        thisHint.style.display = "block";
         thisHint.style.backgroundColor = "var(--deniedColor)";
       }
       break;
@@ -162,7 +183,7 @@ document
   .addEventListener("keyup", checkValidation);
 document
   .querySelector("#password-login")
-  .addEventListener("keyup", checkValidation);
+  .addEventListener("keydown", checkValidation);
 
 document
   .querySelector(".login-form")
