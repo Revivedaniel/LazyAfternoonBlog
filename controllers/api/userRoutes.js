@@ -61,16 +61,15 @@ router.post("/login", async (req, res) => {
     if (!userData) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({ message: "Incorrect email, please try again" });
       return;
     }
-
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
         .status(400)
-        .json({ message: "Incorrect email or password, please try again" });
+        .json({ message: "Incorrect password, please try again" });
       return;
     }
     //Creating a new session for the logged in user
@@ -83,6 +82,7 @@ router.post("/login", async (req, res) => {
     });
   } catch (err) {
     res.status(400).json(err);
+    console.log(err)
   }
 });
 //destroying the users session and thus logging them out
