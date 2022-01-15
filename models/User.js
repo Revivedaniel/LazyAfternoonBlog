@@ -53,6 +53,16 @@ User.init(
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
         return newUserData;
       },
+      beforeBulkCreate: async (newUserArray) => {
+        for (let i = 0; i < newUserArray.length; i++) {
+          const newUserData = newUserArray[i];
+          newUserData.dataValues.password = await bcrypt.hash(
+            newUserData.dataValues.password,
+            10
+          );
+        }
+        return newUserArray;
+      },
       //Before updating the user, hash the password 10 times
       beforeUpdate: async (updatedUserData) => {
         updatedUserData.password = await bcrypt.hash(
