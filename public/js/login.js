@@ -49,7 +49,7 @@ const loginFormHandler = async (event) => {
 
 const signupFormHandler = async (event) => {
   event.preventDefault();
-
+  document.getElementById("sign_up").disabled = true;
   const name = document.querySelector("#name-signup").value.trim();
   const email = document.querySelector("#email-signup").value.trim();
   const password = document.querySelector("#password-signup").value.trim();
@@ -69,6 +69,7 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace("/");
     } else {
+      document.getElementById("sign_up").disabled = false;
       console.log(response.statusText);
       switch (response.statusText) {
         case "Username must be unique":
@@ -99,6 +100,9 @@ const signupFormHandler = async (event) => {
 
 const checkValidation = (event) => {
   // event.preventDefault();
+  const name = document.querySelector("#name-signup").value.trim();
+  const email = document.querySelector("#email-signup").value.trim();
+  const password = document.querySelector("#password-signup").value.trim();
   const targetValue = event.target.value;
   const thisHint = event.target.parentElement.querySelector(".signupHints");
   switch (event.target.getAttribute("id")) {
@@ -165,6 +169,15 @@ const checkValidation = (event) => {
 
     default:
       break;
+  }
+  if (
+    emailRegex.test(email) &&
+    passRegex.test(password) &&
+    nameRegex.test(name)
+  ) {
+    document.querySelector("#sign_up").disabled = false;
+  } else {
+    document.querySelector("#sign_up").disabled = true;
   }
 };
 

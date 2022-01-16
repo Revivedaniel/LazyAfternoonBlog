@@ -371,6 +371,7 @@ body {
   border-radius: var(--uiBorderRadius);
   background-color: var(--color4);
   margin: 0 3px 7px 0;
+  cursor: pointer;
 }
 
 #logIn > * {
@@ -435,6 +436,9 @@ body {
   color: #3e4354;
   box-shadow: 0 1px 2px 0 rgb(56 56 56 / 10%);
   padding: 1.8% 3.8%;
+}
+.form-input:focus {
+  border: var(--lightColor5) 1px solid;
 }
 
 .signupHints {
