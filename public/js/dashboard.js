@@ -67,3 +67,12 @@ for (let i = 0; i < postContainers.length; i++) {
   const element = postContainers[i];
   element.addEventListener("click", toPostPage);
 }
+
+newPostBodyEl.addEventListener("keyup", (event) => {
+  if (event.target.value.length >= 50) {
+    event.preventDefault();
+    post_submit.removeAttribute("disabled");
+  } else {
+    post_submit.setAttribute("disabled", "disabled");
+  }
+})

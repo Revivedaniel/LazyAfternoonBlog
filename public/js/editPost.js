@@ -9,6 +9,7 @@ const titleValue = document.querySelector(".title").innerText;
 const postValue = document.querySelector(".post-body").children[0].innerText;
 const postHeader = document.querySelector(".post-header");
 const postBody = document.querySelector(".post-Body");
+let updatePostText;
 
 updateButtonEl.addEventListener("click", (event) => {
   //title and post-body become inputs with values == title and post-body innerText
@@ -38,6 +39,21 @@ updateButtonEl.addEventListener("click", (event) => {
 
   postHeader.appendChild(titleInput);
   postBody.appendChild(postTextArea);
+  updatePostText = document.getElementById("updatePostText");
+  updatePostText.addEventListener("keydown", (event) => {
+    if (updatePostText.value.length >= 50) {
+      saveButtonEl.removeAttribute("disabled");
+    } else {
+      saveButtonEl.setAttribute("disabled", "disabled");
+    }
+  })
+  updatePostText.addEventListener("click", (event) => {
+    if (updatePostText.value.length >= 50) {
+      saveButtonEl.removeAttribute("disabled");
+    } else {
+      saveButtonEl.setAttribute("disabled", "disabled");
+    }
+  })
 });
 
 //if the save button is clicked send put
@@ -89,3 +105,6 @@ confirmButtonEl.addEventListener("click", async (event) => {
     alert(response.statusText);
   }
 });
+
+
+
