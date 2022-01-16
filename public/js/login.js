@@ -29,7 +29,6 @@ const loginFormHandler = async (event) => {
     } else {
       switch (response.statusText) {
         case "Incorrect email, please try again":
-          console.log("Inside incorrect email");
           emailHint.style.backgroundColor = "var(--deniedColor)";
           emailHint.innerText = response.statusText;
           emailHint.style.display = "block";
@@ -70,7 +69,7 @@ const signupFormHandler = async (event) => {
       document.location.replace("/");
     } else {
       document.getElementById("sign_up").disabled = false;
-      console.log(response.statusText);
+      console.log(response.statusText); 
       switch (response.statusText) {
         case "Username must be unique":
           nameHint.style.backgroundColor = "var(--deniedColor)";

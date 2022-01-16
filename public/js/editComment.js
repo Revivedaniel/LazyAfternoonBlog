@@ -18,7 +18,6 @@ for (let i = 0; i < updateCommentButtonEl.length; i++) {
     commentBodyEl[i].classList.add("hidden");
     const commentTextArea = document.createElement("textarea");
     commentTextArea.setAttribute("id", "updatedComment");
-    console.log(event.target.parentElement.querySelector(".comment-text"));
     commentTextArea.value =
       event.target.parentElement.parentElement.querySelector(
         ".comment-text"
@@ -32,6 +31,15 @@ for (let i = 0; i < updateCommentButtonEl.length; i++) {
     event.target.parentElement.parentElement
       .querySelector(".comment-body")
       .appendChild(commentTextArea);
+    document
+      .getElementById("updatedComment")
+      .addEventListener("keyup", (e) => {
+        if (e.target.value.length > 0) {
+          saveCommentButtonEl[i].disabled = false;
+        } else {
+          saveCommentButtonEl[i].disabled = true;
+        }
+      });
   });
 }
 
