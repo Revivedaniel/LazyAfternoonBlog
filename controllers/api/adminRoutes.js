@@ -8,7 +8,6 @@ router.delete("/posts/:id", adminTask, async (req, res) => {
   try {
     const userData = await User.findByPk(req.session.user_id);
     const user = userData.get({ plain: true });
-    console.log(user);
     if (user.role_id == 1) {
       try {
         const search = Number(req.params.id);
